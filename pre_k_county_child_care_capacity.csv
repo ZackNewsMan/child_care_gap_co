@@ -1,0 +1,65 @@
+county,sum_pre_k_total_spots
+Sedgwick,0
+Lake,10
+Mineral,10
+Dolores,12
+Rio Blanco,12
+Custer,13
+Baca,15
+Hinsdale,15
+Jackson,15
+Kiowa,15
+Crowley,18
+Phillips,18
+Bent,20
+Lincoln,20
+San Juan,25
+Washington,32
+Park,39
+Ouray,51
+Cheyenne,55
+Huerfano,65
+Gilpin,80
+Archuleta,82
+Costilla,84
+Conejos,90
+Saguache,90
+Clear Creek,113
+Gunnison,119
+Delta,124
+Logan,126
+Kit Carson,132
+Grand,147
+Las Animas,148
+Yuma,151
+Rio Grande,159
+Alamosa,163
+Chaffee,174
+San Miguel,175
+Prowers,177
+Morgan,206
+Elbert,220
+Montezuma,223
+Moffat,238
+Routt,248
+Teller,253
+Pitkin,255
+Fremont,308
+Otero,362
+Montrose,393
+Summit,432
+Garfield,459
+La Plata,505
+Eagle,1187
+Broomfield,1296
+Mesa,1322
+Pueblo,1370
+Larimer,2629
+Weld,3547
+Boulder,4206
+Adams,5456
+Douglas,5837
+Jefferson,7586
+El Paso,8153
+Arapahoe,11796
+Denver,12284

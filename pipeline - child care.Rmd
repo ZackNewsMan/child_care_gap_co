@@ -1,0 +1,364 @@
+---
+title: "Child care - Colorado Sun"
+output: html_notebook
+---
+
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+```{r} 
+
+# setting up 
+
+install.packages("janitor")
+install.packages("tidyverse")
+ install.packages("sqldf")
+ install.packages("tidycensus")
+
+library(tidyverse)
+library(janitor)
+library(sqldf)
+library(tidycensus)
+
+
+
+```
+
+```{r}
+
+# To address any dplyr conflicts within tidyverse
+  # https://conflicted.r-lib.org/ 
+
+ install.packages("conflicted")
+      library(conflicted)
+      
+      library(dplyr)
+      conflicts_prefer(dplyr::filter)
+
+```
+
+
+```{r}
+# Note on using the tidycensus package
+  # Background: https://carolinademography.cpc.unc.edu/2022/05/16/story-recipe-how-to-obtain-census-data-using-r-tidycensus/
+  # My API key: ea07b3cb1702529c0736fed80af4412aaaf0bb8d
+
+census_api_key("ea07b3cb1702529c0736fed80af4412aaaf0bb8d", install = TRUE)
+
+
+```
+```{r}
+
+# Obtained data through Colorado Kids but can also be downloaded from the CO Dept of Early Childhood here: https://data.colorado.gov/Early-childhood/Colorado-Licensed-Child-Care-Facilities-Report/a9rr-k8mu/about_data
+
+# Import data 
+
+COLicensedChildCareReportForUpload_2025_12_in_ <- read_csv("COLicensedChildCareReportForUpload_2025-12(in).csv")
+View(COLicensedChildCareReportForUpload_2025_12_in_)
+
+# Clean it 
+
+licensed_child_care <- COLicensedChildCareReportForUpload_2025_12_in_ %>% 
+  clean_names()
+
+
+
+```
+
+```{r}
+
+# Group by number of licensed spots by county and then export 
+
+    # Least spots to most
+      
+       county_child_care_capacity <- licensed_child_care %>% 
+        group_by(county) %>% 
+        summarise(sum_child_care_spots = sum(total_licensed_capacity, na.rm = TRUE)) %>% 
+        arrange(sum_child_care_spots)
+
+
+    # Check it with SQL 
+
+       sqldf("SELECT county, sum(total_licensed_capacity)
+            FROM licensed_child_care
+            GROUP BY county
+            ORDER BY sum(total_licensed_capacity)")
+       
+       # Same answer
+
+# Export
+      
+    #  county_child_care_capacity %>% write_csv("county_child_care_capacity.csv", na = "") 
+
+
+
+```
+
+
+```{r}
+
+# Break out just the spots from counties with the four fewest spots - and county with only one facility
+
+  # Jackson 
+
+    jackson_child_care_spots <- licensed_child_care %>% 
+            filter(county == "Jackson")
+
+  # Dolores
+
+     dolores_child_care_spots <- licensed_child_care %>% 
+            filter(county == "Dolores")
+     
+  # Kiowa
+     
+      kiowa_child_care_spots <- licensed_child_care %>% 
+            filter(county == "Kiowa")
+
+  # San Juan 
+      
+      san_juan_child_care_spots <- licensed_child_care %>% 
+            filter(county == "San Juan")
+      
+  # Crowley
+      
+      crowley_child_care_spots <- licensed_child_care %>% 
+            filter(county == "Crowley")
+      
+# Export
+      
+    #  jackson_child_care_spots %>% write_csv("jackson_child_care_spots.csv", na = "") 
+     
+    #  dolores_child_care_spots %>% write_csv("dolores_child_care_spots.csv", na = "") 
+ 
+    #  kiowa_child_care_spots %>% write_csv("kiowa_child_care_spots.csv", na = "") 
+
+    #  san_juan_child_care_spots %>% write_csv("san_juan_child_care_spots.csv", na = "") 
+
+```
+
+```{r}
+
+
+# Looks like there are only one or two child care centers for entire counties, especially in San Juan and Jackson counties. 
+  # So, I wanted to count the number of unique licenses per county 
+
+   facility_county_count <- licensed_child_care %>% 
+      distinct(license_number, .keep_all = TRUE) %>% 
+      group_by(county) %>%
+      summarize(count = n()) %>% 
+      arrange(count)  
+
+  # Three counties only have one child care facility:
+  
+    # Crowley                     1
+    # Jackson                     1
+    # San Juan                     1
+  
+  # Verify in SQL:
+
+      sqldf("SELECT county, count(license_number)
+            FROM licensed_child_care
+            GROUP BY county
+            ORDER BY count(license_number)")
+        
+          # SQL verified - same thing found
+
+# Export
+      
+    #  facility_county_count %>% write_csv("facility_county_count.csv", na = "") 
+     
+
+```
+
+```{r}
+
+# Spots by county for infant, toddler and preschool 
+
+  pre_k_total <- licensed_child_care %>% 
+        rowwise() %>% 
+        mutate(pre_k_total = sum(c_across(licensed_center_infant_capacity:licensed_center_preschool_capacity), na.rm = TRUE))
+
+
+pre_k_county_child_care_capacity <- pre_k_total %>% 
+        group_by(county) %>% 
+        summarise(sum_pre_k_total_spots = sum(pre_k_total, na.rm = TRUE)) %>% 
+        arrange(sum_pre_k_total_spots)
+
+# Export:
+
+  pre_k_county_child_care_capacity %>% write_csv("pre_k_county_child_care_capacity.csv", na = "") 
+
+  # Sedgwick is appearing as 0 spots here, but one facility lists 40 spots in the licensed_preschool_and_school_age_capacity column. 
+
+    # This is a data reporting issue. State PIO Chynna Roberts said each center can report their licensed spots however they would like. 
+
+  # "Child care centers may have their licensed capacity reported in a couple of ways. Some centers are licensed for a combined capacity of both preschool and school-age children, and this total is reported together. In contrast, programs licensed exclusively as preschool or school-age centers report their capacity separately, as they only serve children within those specific age groups."
+
+```
+
+
+
+
+```{r}
+
+# Want to pull out the kids 7 and under in each county
+  # Then subtract the total kids pop minus the number of licensed spots
+
+# Census API
+
+      decennial_2020_vars <- load_variables(
+        year = 2020, 
+        "pl", 
+        cache = TRUE
+      )
+      
+      # 2010 Decennial Census Variables
+      decennial_2010_vars <- load_variables(
+        year = 2010, 
+        "pl", 
+        cache = TRUE
+      )
+      
+      # 2016 - 2020 5 Year American Community Survey (ACS) Variables
+      
+      acs_20_vars = load_variables(
+        year = 2020, 
+        "acs5",
+        cache = TRUE
+      )
+
+    # Defaults to the most recent ACS and as the 5-year unless otherwise noted
+        # 2024 ACS was recently added
+      
+      get_acs(
+        geography = "county",
+        table = "B09001",
+        state = "CO",
+        year = 2024
+      )
+      
+        # That worked! This was the inspo and it matches which is great
+          # https://censusreporter.org/data/table/?table=B09001&geo_ids=04000US08,050|04000US08&primary_geo_id=04000US08#valueType|estimate
+      
+        # Another helpful resource:
+          # https://nicar.r-journalism.com/2024/
+
+    # It is not perfect and astoundingly annoying but CDEC says someone in preschool could be 2.5 to 7 years old. So I need to include that age range 
+      # From Chynna Roberts (chynna.roberts@state.co.us) 
+    
+         # Here’s a brief explanation of the columns you referenced:
+    
+            # Licensed Home Capacity: birth to 18 years
+            # Licensed Center Infant Capacity: 6 weeks to 18 months
+            # Licensed Center Toddler Capacity: 12 months - 36 months
+            # Licensed Center Preschool Capacity: 2.5 years - 7 years
+            # Licensed Preschool And School Age Capacity: 2 years and older
+            # Licensed School Age Capacity: 5 years and older
+            # Licensed Nyo Capacity: 5 years and older
+            # Licensed Resident Camp Capacity: children who have completed kindergarten or are 6 years of age or older
+
+      # Also can download the data and the definitions here:
+        # https://data.colorado.gov/Early-childhood/Colorado-Licensed-Child-Care-Facilities-Report/a9rr-k8mu/about_data
+
+# To see what variables we need
+      
+    vars <- load_variables(2024, "acs5")
+      
+    View(vars)
+    
+  # I searched B09001 in the variable column to see what the labels correspond to  
+    # So the variables that we need are:
+      # B9001_003: number_under_three
+      # B9001_004: number_three_four
+      # B9001_005: number_five
+      # B9001_006: number_six_to_eight
+    
+  # These numbers are probably going to make the gap look worse than it actually is on the ground but this is the best estimate available based on differing     age ranges for different data sets 
+    
+   co_kids_count_eight_under <- get_acs(
+        geography = "county",
+        state = "CO",
+        variables = c(number_under_three = "B09001_003", 
+                      number_three_four = "B09001_004",
+                      number_five = "B09001_005",
+                      number_six_to_eight = "B09001_006"), 
+        year = 2024
+      )   
+      
+   
+   # Export
+      
+    co_kids_count_eight_under %>% write_csv("co_kids_count_eight_under.csv", na = "") 
+   
+   
+# Add together 
+   
+   sum_co_kids_count_eight_under <- co_kids_count_eight_under %>% 
+      group_by(NAME) %>% 
+      summarise(sum_kids_eight_under = sum(estimate))
+   
+        # Check in SQL
+   
+          sqldf("SELECT name, sum(estimate)
+            FROM co_kids_count_eight_under
+            GROUP BY name
+            ")
+    
+        # Matches so that's good          
+          
+    # Now I need the column names to match before subtracting but they have slightly different names. 
+   
+   renamed_sum_co_kids_count_eight_under <- sum_co_kids_count_eight_under %>%
+      mutate(county = str_extract(NAME, ".*(?=\\s+[Cc]ounty)"))
+   
+# Now to join and calculate the number of gaps per county 
+   
+  spot_kids_gap <- renamed_sum_co_kids_count_eight_under %>% 
+      full_join(pre_k_county_child_care_capacity, by='county') %>% 
+      mutate(spot_kids_gap = sum_kids_eight_under - sum_pre_k_total_spots) 
+   
+  # Export
+      
+    spot_kids_gap %>% write_csv("spot_kids_gap.csv", na = "") 
+     
+      
+```
+
+
+```{r}
+
+# Analyze more from the gaps 
+
+  spot_kids_gap %>% 
+  summarise(sum = sum(spot_kids_gap))
+
+  # There's a gap of 498,611 kids per licensed spots, although a caveat is that the state has the number of licensed places in a facility in any given time. In theory kids could go to classes in the morning and afternoon if there were multiple offerings. 
+
+
+```
+
+```{r}
+
+# Calculate rate of gap divided by total number of kids per county
+
+spot_kids_gap %>% 
+  mutate(gap_ratio = (spot_kids_gap/sum_kids_eight_under)*100)
+
+# An additional story could be on why some of these counties have a better gap ratio than others. For ex, it looks like San Juan and San Miguel counties have most of their kids taken care of with the lowest gap ratio
+
+
+```
+
+

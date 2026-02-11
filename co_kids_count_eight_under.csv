@@ -1,0 +1,257 @@
+GEOID,NAME,variable,estimate,moe
+08001,"Adams County, Colorado",number_under_three,19751,750
+08001,"Adams County, Colorado",number_three_four,13938,746
+08001,"Adams County, Colorado",number_five,6641,715
+08001,"Adams County, Colorado",number_six_to_eight,19708,1171
+08003,"Alamosa County, Colorado",number_under_three,478,116
+08003,"Alamosa County, Colorado",number_three_four,480,120
+08003,"Alamosa County, Colorado",number_five,209,192
+08003,"Alamosa County, Colorado",number_six_to_eight,666,159
+08005,"Arapahoe County, Colorado",number_under_three,22484,771
+08005,"Arapahoe County, Colorado",number_three_four,15398,770
+08005,"Arapahoe County, Colorado",number_five,7495,760
+08005,"Arapahoe County, Colorado",number_six_to_eight,24219,1069
+08007,"Archuleta County, Colorado",number_under_three,275,84
+08007,"Archuleta County, Colorado",number_three_four,254,77
+08007,"Archuleta County, Colorado",number_five,137,91
+08007,"Archuleta County, Colorado",number_six_to_eight,435,133
+08009,"Baca County, Colorado",number_under_three,111,25
+08009,"Baca County, Colorado",number_three_four,65,23
+08009,"Baca County, Colorado",number_five,47,34
+08009,"Baca County, Colorado",number_six_to_eight,171,51
+08011,"Bent County, Colorado",number_under_three,98,31
+08011,"Bent County, Colorado",number_three_four,89,23
+08011,"Bent County, Colorado",number_five,50,37
+08011,"Bent County, Colorado",number_six_to_eight,237,107
+08013,"Boulder County, Colorado",number_under_three,7232,420
+08013,"Boulder County, Colorado",number_three_four,5548,420
+08013,"Boulder County, Colorado",number_five,2874,409
+08013,"Boulder County, Colorado",number_six_to_eight,9249,585
+08014,"Broomfield County, Colorado",number_under_three,1994,194
+08014,"Broomfield County, Colorado",number_three_four,1366,194
+08014,"Broomfield County, Colorado",number_five,902,202
+08014,"Broomfield County, Colorado",number_six_to_eight,2237,288
+08015,"Chaffee County, Colorado",number_under_three,330,133
+08015,"Chaffee County, Colorado",number_three_four,384,129
+08015,"Chaffee County, Colorado",number_five,120,88
+08015,"Chaffee County, Colorado",number_six_to_eight,438,162
+08017,"Cheyenne County, Colorado",number_under_three,59,33
+08017,"Cheyenne County, Colorado",number_three_four,30,18
+08017,"Cheyenne County, Colorado",number_five,26,12
+08017,"Cheyenne County, Colorado",number_six_to_eight,60,25
+08019,"Clear Creek County, Colorado",number_under_three,141,34
+08019,"Clear Creek County, Colorado",number_three_four,113,29
+08019,"Clear Creek County, Colorado",number_five,62,41
+08019,"Clear Creek County, Colorado",number_six_to_eight,268,80
+08021,"Conejos County, Colorado",number_under_three,234,45
+08021,"Conejos County, Colorado",number_three_four,225,45
+08021,"Conejos County, Colorado",number_five,100,44
+08021,"Conejos County, Colorado",number_six_to_eight,365,109
+08023,"Costilla County, Colorado",number_under_three,74,22
+08023,"Costilla County, Colorado",number_three_four,103,22
+08023,"Costilla County, Colorado",number_five,21,20
+08023,"Costilla County, Colorado",number_six_to_eight,63,40
+08025,"Crowley County, Colorado",number_under_three,91,34
+08025,"Crowley County, Colorado",number_three_four,57,30
+08025,"Crowley County, Colorado",number_five,26,18
+08025,"Crowley County, Colorado",number_six_to_eight,99,27
+08027,"Custer County, Colorado",number_under_three,60,37
+08027,"Custer County, Colorado",number_three_four,40,39
+08027,"Custer County, Colorado",number_five,3,6
+08027,"Custer County, Colorado",number_six_to_eight,51,33
+08029,"Delta County, Colorado",number_under_three,791,111
+08029,"Delta County, Colorado",number_three_four,648,122
+08029,"Delta County, Colorado",number_five,242,127
+08029,"Delta County, Colorado",number_six_to_eight,839,164
+08031,"Denver County, Colorado",number_under_three,22888,904
+08031,"Denver County, Colorado",number_three_four,15433,900
+08031,"Denver County, Colorado",number_five,7540,797
+08031,"Denver County, Colorado",number_six_to_eight,19233,1050
+08033,"Dolores County, Colorado",number_under_three,97,96
+08033,"Dolores County, Colorado",number_three_four,38,45
+08033,"Dolores County, Colorado",number_five,0,14
+08033,"Dolores County, Colorado",number_six_to_eight,18,7
+08035,"Douglas County, Colorado",number_under_three,12180,534
+08035,"Douglas County, Colorado",number_three_four,8144,529
+08035,"Douglas County, Colorado",number_five,4519,492
+08035,"Douglas County, Colorado",number_six_to_eight,13846,639
+08037,"Eagle County, Colorado",number_under_three,1325,282
+08037,"Eagle County, Colorado",number_three_four,1428,282
+08037,"Eagle County, Colorado",number_five,772,394
+08037,"Eagle County, Colorado",number_six_to_eight,1346,309
+08039,"Elbert County, Colorado",number_under_three,767,122
+08039,"Elbert County, Colorado",number_three_four,617,95
+08039,"Elbert County, Colorado",number_five,217,71
+08039,"Elbert County, Colorado",number_six_to_eight,979,165
+08041,"El Paso County, Colorado",number_under_three,26963,873
+08041,"El Paso County, Colorado",number_three_four,18587,872
+08041,"El Paso County, Colorado",number_five,8593,692
+08041,"El Paso County, Colorado",number_six_to_eight,28590,1209
+08043,"Fremont County, Colorado",number_under_three,1215,179
+08043,"Fremont County, Colorado",number_three_four,702,176
+08043,"Fremont County, Colorado",number_five,383,143
+08043,"Fremont County, Colorado",number_six_to_eight,1153,240
+08045,"Garfield County, Colorado",number_under_three,2227,328
+08045,"Garfield County, Colorado",number_three_four,1742,306
+08045,"Garfield County, Colorado",number_five,853,346
+08045,"Garfield County, Colorado",number_six_to_eight,2347,536
+08047,"Gilpin County, Colorado",number_under_three,246,89
+08047,"Gilpin County, Colorado",number_three_four,54,52
+08047,"Gilpin County, Colorado",number_five,37,33
+08047,"Gilpin County, Colorado",number_six_to_eight,232,164
+08049,"Grand County, Colorado",number_under_three,371,124
+08049,"Grand County, Colorado",number_three_four,317,109
+08049,"Grand County, Colorado",number_five,97,63
+08049,"Grand County, Colorado",number_six_to_eight,528,145
+08051,"Gunnison County, Colorado",number_under_three,289,63
+08051,"Gunnison County, Colorado",number_three_four,177,84
+08051,"Gunnison County, Colorado",number_five,117,69
+08051,"Gunnison County, Colorado",number_six_to_eight,393,130
+08053,"Hinsdale County, Colorado",number_under_three,23,19
+08053,"Hinsdale County, Colorado",number_three_four,15,16
+08053,"Hinsdale County, Colorado",number_five,17,20
+08053,"Hinsdale County, Colorado",number_six_to_eight,24,18
+08055,"Huerfano County, Colorado",number_under_three,178,92
+08055,"Huerfano County, Colorado",number_three_four,94,47
+08055,"Huerfano County, Colorado",number_five,19,30
+08055,"Huerfano County, Colorado",number_six_to_eight,63,62
+08057,"Jackson County, Colorado",number_under_three,11,17
+08057,"Jackson County, Colorado",number_three_four,29,26
+08057,"Jackson County, Colorado",number_five,21,22
+08057,"Jackson County, Colorado",number_six_to_eight,60,41
+08059,"Jefferson County, Colorado",number_under_three,16519,549
+08059,"Jefferson County, Colorado",number_three_four,10473,555
+08059,"Jefferson County, Colorado",number_five,6161,538
+08059,"Jefferson County, Colorado",number_six_to_eight,17234,787
+08061,"Kiowa County, Colorado",number_under_three,30,17
+08061,"Kiowa County, Colorado",number_three_four,28,15
+08061,"Kiowa County, Colorado",number_five,17,15
+08061,"Kiowa County, Colorado",number_six_to_eight,68,22
+08063,"Kit Carson County, Colorado",number_under_three,308,40
+08063,"Kit Carson County, Colorado",number_three_four,133,40
+08063,"Kit Carson County, Colorado",number_five,91,44
+08063,"Kit Carson County, Colorado",number_six_to_eight,289,84
+08065,"Lake County, Colorado",number_under_three,242,108
+08065,"Lake County, Colorado",number_three_four,131,68
+08065,"Lake County, Colorado",number_five,45,37
+08065,"Lake County, Colorado",number_six_to_eight,221,94
+08067,"La Plata County, Colorado",number_under_three,1312,155
+08067,"La Plata County, Colorado",number_three_four,959,158
+08067,"La Plata County, Colorado",number_five,810,252
+08067,"La Plata County, Colorado",number_six_to_eight,1204,202
+08069,"Larimer County, Colorado",number_under_three,8885,585
+08069,"Larimer County, Colorado",number_three_four,7013,584
+08069,"Larimer County, Colorado",number_five,3671,613
+08069,"Larimer County, Colorado",number_six_to_eight,10515,644
+08071,"Las Animas County, Colorado",number_under_three,312,62
+08071,"Las Animas County, Colorado",number_three_four,311,68
+08071,"Las Animas County, Colorado",number_five,121,51
+08071,"Las Animas County, Colorado",number_six_to_eight,465,73
+08073,"Lincoln County, Colorado",number_under_three,175,53
+08073,"Lincoln County, Colorado",number_three_four,72,28
+08073,"Lincoln County, Colorado",number_five,38,25
+08073,"Lincoln County, Colorado",number_six_to_eight,125,38
+08075,"Logan County, Colorado",number_under_three,648,138
+08075,"Logan County, Colorado",number_three_four,353,90
+08075,"Logan County, Colorado",number_five,292,112
+08075,"Logan County, Colorado",number_six_to_eight,601,170
+08077,"Mesa County, Colorado",number_under_three,4224,416
+08077,"Mesa County, Colorado",number_three_four,3679,419
+08077,"Mesa County, Colorado",number_five,1582,332
+08077,"Mesa County, Colorado",number_six_to_eight,5663,536
+08079,"Mineral County, Colorado",number_under_three,25,27
+08079,"Mineral County, Colorado",number_three_four,0,14
+08079,"Mineral County, Colorado",number_five,0,14
+08079,"Mineral County, Colorado",number_six_to_eight,10,9
+08081,"Moffat County, Colorado",number_under_three,407,73
+08081,"Moffat County, Colorado",number_three_four,304,93
+08081,"Moffat County, Colorado",number_five,203,106
+08081,"Moffat County, Colorado",number_six_to_eight,484,125
+08083,"Montezuma County, Colorado",number_under_three,816,129
+08083,"Montezuma County, Colorado",number_three_four,434,157
+08083,"Montezuma County, Colorado",number_five,418,210
+08083,"Montezuma County, Colorado",number_six_to_eight,728,171
+08085,"Montrose County, Colorado",number_under_three,1164,170
+08085,"Montrose County, Colorado",number_three_four,861,157
+08085,"Montrose County, Colorado",number_five,401,113
+08085,"Montrose County, Colorado",number_six_to_eight,1426,251
+08087,"Morgan County, Colorado",number_under_three,1102,168
+08087,"Morgan County, Colorado",number_three_four,893,169
+08087,"Morgan County, Colorado",number_five,391,130
+08087,"Morgan County, Colorado",number_six_to_eight,1495,264
+08089,"Otero County, Colorado",number_under_three,625,114
+08089,"Otero County, Colorado",number_three_four,403,115
+08089,"Otero County, Colorado",number_five,197,72
+08089,"Otero County, Colorado",number_six_to_eight,519,124
+08091,"Ouray County, Colorado",number_under_three,41,23
+08091,"Ouray County, Colorado",number_three_four,53,31
+08091,"Ouray County, Colorado",number_five,20,15
+08091,"Ouray County, Colorado",number_six_to_eight,59,24
+08093,"Park County, Colorado",number_under_three,378,115
+08093,"Park County, Colorado",number_three_four,215,106
+08093,"Park County, Colorado",number_five,47,45
+08093,"Park County, Colorado",number_six_to_eight,302,96
+08095,"Phillips County, Colorado",number_under_three,156,85
+08095,"Phillips County, Colorado",number_three_four,107,65
+08095,"Phillips County, Colorado",number_five,90,43
+08095,"Phillips County, Colorado",number_six_to_eight,213,69
+08097,"Pitkin County, Colorado",number_under_three,236,91
+08097,"Pitkin County, Colorado",number_three_four,262,86
+08097,"Pitkin County, Colorado",number_five,43,37
+08097,"Pitkin County, Colorado",number_six_to_eight,301,116
+08099,"Prowers County, Colorado",number_under_three,439,91
+08099,"Prowers County, Colorado",number_three_four,319,91
+08099,"Prowers County, Colorado",number_five,301,124
+08099,"Prowers County, Colorado",number_six_to_eight,738,130
+08101,"Pueblo County, Colorado",number_under_three,4976,367
+08101,"Pueblo County, Colorado",number_three_four,4047,367
+08101,"Pueblo County, Colorado",number_five,1967,379
+08101,"Pueblo County, Colorado",number_six_to_eight,5768,505
+08103,"Rio Blanco County, Colorado",number_under_three,332,104
+08103,"Rio Blanco County, Colorado",number_three_four,117,35
+08103,"Rio Blanco County, Colorado",number_five,78,47
+08103,"Rio Blanco County, Colorado",number_six_to_eight,246,100
+08105,"Rio Grande County, Colorado",number_under_three,348,77
+08105,"Rio Grande County, Colorado",number_three_four,214,77
+08105,"Rio Grande County, Colorado",number_five,46,41
+08105,"Rio Grande County, Colorado",number_six_to_eight,413,133
+08107,"Routt County, Colorado",number_under_three,494,114
+08107,"Routt County, Colorado",number_three_four,422,108
+08107,"Routt County, Colorado",number_five,238,94
+08107,"Routt County, Colorado",number_six_to_eight,807,138
+08109,"Saguache County, Colorado",number_under_three,72,49
+08109,"Saguache County, Colorado",number_three_four,219,86
+08109,"Saguache County, Colorado",number_five,52,37
+08109,"Saguache County, Colorado",number_six_to_eight,215,82
+08111,"San Juan County, Colorado",number_under_three,34,30
+08111,"San Juan County, Colorado",number_three_four,3,2
+08111,"San Juan County, Colorado",number_five,0,14
+08111,"San Juan County, Colorado",number_six_to_eight,12,14
+08113,"San Miguel County, Colorado",number_under_three,103,72
+08113,"San Miguel County, Colorado",number_three_four,98,72
+08113,"San Miguel County, Colorado",number_five,124,133
+08113,"San Miguel County, Colorado",number_six_to_eight,118,47
+08115,"Sedgwick County, Colorado",number_under_three,113,60
+08115,"Sedgwick County, Colorado",number_three_four,64,29
+08115,"Sedgwick County, Colorado",number_five,12,12
+08115,"Sedgwick County, Colorado",number_six_to_eight,66,27
+08117,"Summit County, Colorado",number_under_three,428,124
+08117,"Summit County, Colorado",number_three_four,716,212
+08117,"Summit County, Colorado",number_five,260,176
+08117,"Summit County, Colorado",number_six_to_eight,1066,365
+08119,"Teller County, Colorado",number_under_three,466,82
+08119,"Teller County, Colorado",number_three_four,387,76
+08119,"Teller County, Colorado",number_five,278,146
+08119,"Teller County, Colorado",number_six_to_eight,727,164
+08121,"Washington County, Colorado",number_under_three,140,28
+08121,"Washington County, Colorado",number_three_four,112,31
+08121,"Washington County, Colorado",number_five,50,19
+08121,"Washington County, Colorado",number_six_to_eight,270,39
+08123,"Weld County, Colorado",number_under_three,14021,676
+08123,"Weld County, Colorado",number_three_four,9743,676
+08123,"Weld County, Colorado",number_five,4315,492
+08123,"Weld County, Colorado",number_six_to_eight,14118,867
+08125,"Yuma County, Colorado",number_under_three,465,62
+08125,"Yuma County, Colorado",number_three_four,253,63
+08125,"Yuma County, Colorado",number_five,197,70
+08125,"Yuma County, Colorado",number_six_to_eight,545,163

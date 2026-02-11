@@ -1,0 +1,65 @@
+county,sum_child_care_spots
+Jackson,15
+Dolores,41
+Kiowa,41
+San Juan,45
+Mineral,63
+Sedgwick,72
+Crowley,74
+Huerfano,84
+Costilla,97
+Baca,100
+Cheyenne,101
+Bent,121
+Ouray,133
+Rio Blanco,155
+Phillips,156
+Conejos,159
+Lincoln,163
+Hinsdale,205
+Saguache,228
+Washington,228
+Kit Carson,236
+Gilpin,270
+Yuma,350
+Lake,355
+Moffat,355
+Las Animas,361
+Custer,377
+Prowers,407
+Archuleta,454
+Clear Creek,495
+Alamosa,521
+Rio Grande,521
+San Miguel,575
+Logan,576
+Otero,585
+Delta,687
+Montrose,736
+Montezuma,1008
+Fremont,1013
+Morgan,1107
+Pitkin,1299
+Chaffee,1438
+Gunnison,1445
+Routt,1514
+Park,1745
+Grand,1763
+Summit,1873
+Garfield,2141
+La Plata,2166
+Teller,2302
+Elbert,2495
+Eagle,2746
+Pueblo,3333
+Broomfield,4565
+Mesa,4973
+Weld,12818
+Adams,18773
+Larimer,19302
+Boulder,19431
+Douglas,20971
+El Paso,27892
+Jefferson,30425
+Arapahoe,33674
+Denver,34642
