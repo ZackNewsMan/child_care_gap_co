@@ -8,8 +8,8 @@ The state data has the number of licensed places in a facility in any given time
 These numbers are probably going to make the gap look worse than it actually is on the ground but this is the best estimate available based on differing age ranges for different data sets. The 5-year ACS Census data has age ranges for:
 
 - Number of kids 3 and under
-- Kids ages 3 - 4K
-- ids 5 years-old
+- Kids ages 3 - 4
+- Kids 5 years-old
 - Kids 6 - 8 years-old
 
 I analyzed statewide child care data with the number of spots that "reflects licensed capacity, which is the maximum number of children that can be served in a licensed facility at a given time," according to CDEC spokesperson Chynna Roberts. Their data and definitions can be found here: https://data.colorado.gov/Early-childhood/Colorado-Licensed-Child-Care-Facilities-Report/a9rr-k8mu/about_data
