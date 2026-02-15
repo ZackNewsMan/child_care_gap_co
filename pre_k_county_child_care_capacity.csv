@@ -19,24 +19,24 @@ Park,39
 Ouray,51
 Cheyenne,55
 Huerfano,65
-Gilpin,80
 Archuleta,82
 Costilla,84
 Conejos,90
+Gunnison,90
 Saguache,90
+Gilpin,110
 Clear Creek,113
-Gunnison,119
-Delta,124
+Delta,126
 Logan,126
 Kit Carson,132
-Grand,147
 Las Animas,148
 Yuma,151
 Rio Grande,159
 Alamosa,163
-Chaffee,174
+Grand,167
 San Miguel,175
 Prowers,177
+Chaffee,184
 Morgan,206
 Elbert,220
 Montezuma,223
@@ -48,18 +48,18 @@ Fremont,308
 Otero,362
 Montrose,393
 Summit,432
-Garfield,459
+Garfield,439
 La Plata,505
-Eagle,1187
-Broomfield,1296
-Mesa,1322
+Broomfield,1149
+Eagle,1235
+Mesa,1332
 Pueblo,1370
-Larimer,2629
-Weld,3547
-Boulder,4206
-Adams,5456
-Douglas,5837
-Jefferson,7586
-El Paso,8153
-Arapahoe,11796
-Denver,12284
+Larimer,2619
+Weld,3582
+Boulder,4166
+Adams,5434
+Douglas,6031
+Jefferson,7564
+El Paso,8055
+Arapahoe,11741
+Denver,12173

@@ -266,4 +266,30 @@
       mutate(spot_kids_gap = sum_kids_eight_under - sum_pre_k_total_spots) 
       
       # worked really well :) 
+    
+    
+  ############ check recalc of total infant/toddler spots ###############
+    
+    
+    licensed_child_care %>% 
+      rowwise() %>% 
+      mutate(infant_toddler_total = sum(c_across(licensed_center_infant_capacity:licensed_center_toddler_capacity), na.rm = TRUE)) %>% 
+      View()
+    
+    # Worked!
+    
+    renamed_sum_co_kids_count_four_under %>% 
+      full_join(infant_toddler_county_child_care_capacity, by='county') %>% 
+      mutate(spot_kids_gap = sum_kids_four_under - sum_infant_toddler_total_spots) %>%
+      mutate(gap_ratio = (spot_kids_gap/sum_kids_four_under)*100) %>% 
+      View()
+    
+    
+    
+    
+    
+    
+    
+    
+    
       

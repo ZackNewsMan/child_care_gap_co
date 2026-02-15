@@ -1,0 +1,65 @@
+NAME,sum_kids_under_3,county,sum_infant_total_spots,spot_infant_gap,gap_ratio
+"Adams County, Colorado",19751,Adams,732,19019,96.29385853880817
+"Alamosa County, Colorado",478,Alamosa,43,435,91.0041841004184
+"Arapahoe County, Colorado",22484,Arapahoe,1254,21230,94.42270058708415
+"Archuleta County, Colorado",275,Archuleta,9,266,96.72727272727273
+"Baca County, Colorado",111,Baca,2,109,98.1981981981982
+"Bent County, Colorado",98,Bent,10,88,89.79591836734694
+"Boulder County, Colorado",7232,Boulder,608,6624,91.5929203539823
+"Broomfield County, Colorado",1994,Broomfield,191,1803,90.42126379137412
+"Chaffee County, Colorado",330,Chaffee,0,330,100
+"Cheyenne County, Colorado",59,Cheyenne,5,54,91.52542372881356
+"Clear Creek County, Colorado",141,Clear Creek,10,131,92.90780141843972
+"Conejos County, Colorado",234,Conejos,0,234,100
+"Costilla County, Colorado",74,Costilla,4,70,94.5945945945946
+"Crowley County, Colorado",91,Crowley,8,83,91.20879120879121
+"Custer County, Colorado",60,Custer,5,55,91.66666666666666
+"Delta County, Colorado",791,Delta,7,784,99.11504424778761
+"Denver County, Colorado",22888,Denver,1315,21573,94.25463124781544
+"Dolores County, Colorado",97,Dolores,5,92,94.84536082474226
+"Douglas County, Colorado",12180,Douglas,849,11331,93.0295566502463
+"Eagle County, Colorado",1325,Eagle,188,1137,85.81132075471697
+"El Paso County, Colorado",26963,El Paso,998,25965,96.29863145792382
+"Elbert County, Colorado",767,Elbert,10,757,98.69621903520208
+"Fremont County, Colorado",1215,Fremont,40,1175,96.70781893004116
+"Garfield County, Colorado",2227,Garfield,59,2168,97.35069600359228
+"Gilpin County, Colorado",246,Gilpin,10,236,95.9349593495935
+"Grand County, Colorado",371,Grand,35,336,90.56603773584906
+"Gunnison County, Colorado",289,Gunnison,29,260,89.96539792387543
+"Hinsdale County, Colorado",23,Hinsdale,0,23,100
+"Huerfano County, Colorado",178,Huerfano,5,173,97.19101123595506
+"Jackson County, Colorado",11,Jackson,0,11,100
+"Jefferson County, Colorado",16519,Jefferson,1347,15172,91.84575337490163
+"Kiowa County, Colorado",30,Kiowa,0,30,100
+"Kit Carson County, Colorado",308,Kit Carson,9,299,97.07792207792207
+"La Plata County, Colorado",1312,La Plata,57,1255,95.65548780487805
+"Lake County, Colorado",242,Lake,0,242,100
+"Larimer County, Colorado",8885,Larimer,613,8272,93.1007315700619
+"Las Animas County, Colorado",312,Las Animas,0,312,100
+"Lincoln County, Colorado",175,Lincoln,3,172,98.28571428571429
+"Logan County, Colorado",648,Logan,8,640,98.76543209876543
+"Mesa County, Colorado",4224,Mesa,138,4086,96.73295454545455
+"Mineral County, Colorado",25,Mineral,0,25,100
+"Moffat County, Colorado",407,Moffat,9,398,97.78869778869779
+"Montezuma County, Colorado",816,Montezuma,10,806,98.77450980392157
+"Montrose County, Colorado",1164,Montrose,39,1125,96.64948453608247
+"Morgan County, Colorado",1102,Morgan,44,1058,96.00725952813067
+"Otero County, Colorado",625,Otero,23,602,96.32
+"Ouray County, Colorado",41,Ouray,0,41,100
+"Park County, Colorado",378,Park,9,369,97.61904761904762
+"Phillips County, Colorado",156,Phillips,8,148,94.87179487179486
+"Pitkin County, Colorado",236,Pitkin,64,172,72.88135593220339
+"Prowers County, Colorado",439,Prowers,10,429,97.72209567198178
+"Pueblo County, Colorado",4976,Pueblo,99,4877,98.0104501607717
+"Rio Blanco County, Colorado",332,Rio Blanco,2,330,99.3975903614458
+"Rio Grande County, Colorado",348,Rio Grande,8,340,97.70114942528735
+"Routt County, Colorado",494,Routt,43,451,91.29554655870446
+"Saguache County, Colorado",72,Saguache,19,53,73.61111111111111
+"San Juan County, Colorado",34,San Juan,10,24,70.58823529411765
+"San Miguel County, Colorado",103,San Miguel,20,83,80.58252427184466
+"Sedgwick County, Colorado",113,Sedgwick,0,113,100
+"Summit County, Colorado",428,Summit,82,346,80.8411214953271
+"Teller County, Colorado",466,Teller,26,440,94.4206008583691
+"Washington County, Colorado",140,Washington,8,132,94.28571428571428
+"Weld County, Colorado",14021,Weld,311,13710,97.78189858070037
+"Yuma County, Colorado",465,Yuma,25,440,94.6236559139785
