@@ -7,7 +7,7 @@ There's a gap of aaproximately 173,544 infants per licensed child care spots sta
 - With a gap of 173,544 licensed spots for every infant under 3-years-old in the Centennial State. 
 
 # Caveats:
-We focused on infants because that was the most conservative and accurate way to do this comparison. "Infants" in state data are for 6 weeks to 18 months-old. We decided against also including toddler spots because the Census data either runs 3 and under or 3 to 4-years-old. There is not a category just for 3-year-olds. The state data for toddlers runs up to 3-years-old (36 months). So - it could be possible that the gap could have been bigger than was on the ground if we ran calculations for both infants and toddlers.
+"Infants" in state data are for 6 weeks to 18 months-old. The Census data either runs 3 and under or 3 to 4-years-old. There is not a category just for 3-year-olds. The state data for toddlers runs up to 3-years-old (36 months).  So - it could be possible that the gap could be even bigger but this is a conservative  estimate.
 
 compare kids under three in the Census data by counties with 
 
