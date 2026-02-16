@@ -1,10 +1,15 @@
 # child_care_gap_co
-There's a gap of aaproximately 173,544 infants per licensed child care spots statewide in Colorado. This data dives into that gap by county. Some takeaways:
+There's a gap of aproximately 173,544 infants per licensed child care spots statewide in Colorado. This data dives into that gap by county. Some takeaways:
 
 - There are 10 counties without ANY licensed infant child care spots.
 - There are licensed spots for 9,475 infants in Colorado (ages 6 weeks to 18 months).
 - There are 183,019 kids under three in CO per the most recent 5-year ACS survey. 
 - With a gap of 173,544 licensed spots for every infant under 3-years-old in the Centennial State. 
+
+Here are the totals when comparing the number of kids under three compared with licensed spots just for infants or toddlers:
+
+- There are 183,019 kids under three in CO.
+- 33,060 spots for infants and toddlers - a gap of 149,959 kids.
 
 # Caveats:
 "Infants" in state data are for 6 weeks to 18 months-old. The Census data either runs 3 and under or 3 to 4-years-old. There is not a category just for 3-year-olds. The state data for toddlers runs up to 3-years-old (36 months).  So - it could be possible that the gap could be even bigger but this is a conservative  estimate.
