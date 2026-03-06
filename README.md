@@ -11,6 +11,11 @@ Here are the totals when comparing the number of kids under three compared with 
 - There are 183,019 kids under three in CO.
 - 33,060 spots for infants and toddlers - a gap of 149,959 kids.
 
+# Links to published pieces:
+First map: https://public.flourish.studio/visualisation/27669208/
+Second map: https://public.flourish.studio/visualisation/27900980/
+ - 
+
 # Caveats:
 "Infants" in state data are for 6 weeks to 18 months-old. The Census data either runs 3 and under or 3 to 4-years-old. There is not a category just for 3-year-olds. The state data for toddlers runs up to 3-years-old (36 months).  So - it could be possible that the gap could be even bigger but this is a conservative  estimate.
 
