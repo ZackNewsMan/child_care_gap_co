@@ -108,7 +108,7 @@ licensed_child_care <- Colorado_Licensed_Child_Care_Facilities_Report_20260215 %
 
 # Export
       
-    county_child_care_capacity %>% write_csv("county_child_care_capacity.csv", na = "") 
+  #   county_child_care_capacity %>% write_csv("county_child_care_capacity.csv", na = "") 
 
 
 
@@ -146,13 +146,13 @@ licensed_child_care <- Colorado_Licensed_Child_Care_Facilities_Report_20260215 %
       
 # Export
       
-      jackson_child_care_spots %>% write_csv("jackson_child_care_spots.csv", na = "") 
+     # jackson_child_care_spots %>% write_csv("jackson_child_care_spots.csv", na = "") 
      
-      dolores_child_care_spots %>% write_csv("dolores_child_care_spots.csv", na = "") 
+     # dolores_child_care_spots %>% write_csv("dolores_child_care_spots.csv", na = "") 
  
-      kiowa_child_care_spots %>% write_csv("kiowa_child_care_spots.csv", na = "") 
+     #  kiowa_child_care_spots %>% write_csv("kiowa_child_care_spots.csv", na = "") 
 
-      san_juan_child_care_spots %>% write_csv("san_juan_child_care_spots.csv", na = "") 
+     #  san_juan_child_care_spots %>% write_csv("san_juan_child_care_spots.csv", na = "") 
 
 ```
 
@@ -206,7 +206,7 @@ pre_k_county_child_care_capacity <- pre_k_total %>%
 
 # Export:
 
-   pre_k_county_child_care_capacity %>% write_csv("pre_k_county_child_care_capacity.csv", na = "") 
+  # pre_k_county_child_care_capacity %>% write_csv("pre_k_county_child_care_capacity.csv", na = "") 
 
   # Sedgwick is appearing as 0 spots here, but one facility lists 40 spots in the licensed_preschool_and_school_age_capacity column. 
 
@@ -339,7 +339,7 @@ pre_k_county_child_care_capacity <- pre_k_total %>%
    
   # Export
       
-    spot_kids_gap %>% write_csv("spot_kids_gap.csv", na = "") 
+   # spot_kids_gap %>% write_csv("spot_kids_gap.csv", na = "") 
      
       
 ```
@@ -420,7 +420,7 @@ infant_toddler_county_child_care_capacity <- infant_toddler_total %>%
 
 # Export
       
- infant_toddler_county_child_care_capacity %>% write_csv("infant_toddler_county_child_care_capacity.csv", na = "") 
+ # infant_toddler_county_child_care_capacity %>% write_csv("infant_toddler_county_child_care_capacity.csv", na = "") 
 
 
 ```
@@ -438,7 +438,7 @@ infant_toddler_county_child_care_capacity <- infant_toddler_total %>%
    
   # Export
       
-    toddler_spot_kids_gap %>% write_csv("toddler_spot_kids_gap.csv", na = "") 
+  #  toddler_spot_kids_gap %>% write_csv("toddler_spot_kids_gap.csv", na = "") 
 
 
 ```
@@ -458,7 +458,7 @@ infant_county_child_care_capacity <- infant_toddler_total %>%
 
 # Export
       
-   infant_county_child_care_capacity %>% write_csv("infant_county_child_care_capacity.csv", na = "") 
+  # infant_county_child_care_capacity %>% write_csv("infant_county_child_care_capacity.csv", na = "") 
 
 
 
@@ -509,7 +509,7 @@ infant_spot_kids_gap <- renamed_sum_co_kids_count_under_three %>%
 
  # Export
       
-    infant_spot_kids_gap %>% write_csv("infant_spot_kids_gap.csv", na = "") 
+  #  infant_spot_kids_gap %>% write_csv("infant_spot_kids_gap.csv", na = "") 
 
 
 
@@ -549,6 +549,98 @@ infant_spot_kids_gap %>%
 
 ```
 
+```{r}
+
+# Compare kids under three with number of licensed spots for infants/toddlers
 
 
+
+under_three_infant_toddler_spot_kids_gap <- renamed_sum_co_kids_count_under_three %>% 
+      full_join(infant_toddler_county_child_care_capacity, by='county') %>% 
+      mutate(spot_infant_gap = sum_kids_under_3 - sum_infant_toddler_total_spots) %>%
+      mutate(gap_ratio = (spot_infant_gap/sum_kids_under_3)*100)
+
+ # Export
+      
+   # under_three_infant_toddler_spot_kids_gap %>% write_csv("under_three_infant_toddler_spot_kids_gap.csv", na = "") 
+
+
+```
+
+```{r}
+
+# Doing summations
+
+  under_three_infant_toddler_spot_kids_gap %>% 
+  summarise(infants_total_statewide = sum(sum_kids_under_3),
+             infant_toddler_spots_total_statewide = sum(sum_infant_toddler_total_spots),
+             gap_total_statewide = sum(spot_infant_gap))
+
+
+# There are 183,019 kids under three in CO. 33,060 spots for infants and toddlers - a gap of 149,959 kids.
+
+
+```
+
+```{r}
+
+# need to add in infants into column to adjust for gap with a new column for just infants and just toddlers
+
+toddler_spots_county <- licensed_child_care %>% 
+      group_by(county) %>% 
+      summarise(sum_toddler_total_spots = sum(licensed_center_toddler_capacity, na.rm = TRUE)) %>% 
+      arrange(sum_toddler_total_spots)
+
+
+ sep_columns_under_three_infant_toddler_spot_kids_gap <- renamed_sum_co_kids_count_under_three %>% 
+              full_join(infant_county_child_care_capacity, by='county') %>% 
+              full_join(toddler_spots_county, by='county') %>% 
+              mutate(spot_infant_toddler_gap = sum_kids_under_3 - sum_infant_total_spots - sum_toddler_total_spots) %>%
+              mutate(gap_ratio = (spot_infant_toddler_gap/sum_kids_under_3)*100)
+
+# Export
+      
+   sep_columns_under_three_infant_toddler_spot_kids_gap %>% write_csv("sep_columns_under_three_infant_toddler_spot_kids_gap.csv", na = "") 
+
+
+```
+
+
+```{r}
+# Sums for infants, toddlers and gap
+
+  sep_columns_under_three_infant_toddler_spot_kids_gap %>% 
+  summarise(infants_total_statewide = sum(sum_kids_under_3),
+            infant_spots_statewide = sum(sum_infant_total_spots),
+            toddler_spots_total_statewide = sum(sum_toddler_total_spots),
+            gap_total_statewide = sum(spot_infant_toddler_gap))
+
+
+# There are 183,019 kids under three in CO. 
+  # 9,475 spots for infants 
+  # 23,585 spots for toddlers 
+  # A gap of 149,959 kids.
+
+```
+```{r}
+
+# Double checking Census county pop totals 
+
+          sqldf("SELECT name, sum(estimate)
+            FROM co_kids_count_under_three
+            GROUP BY name
+            ")
+    
+        # Matches again so that's good          
+
+# Checking county licensed totals in SQL 
+
+        sqldf("SELECT county, sum(licensed_center_infant_capacity), sum(licensed_center_toddler_capacity) 
+            FROM licensed_child_care
+            GROUP BY county
+            ")
+
+          # Matches again so we're good to go
+
+```
 
